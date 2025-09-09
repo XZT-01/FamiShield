@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing - FamiShield</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(45deg, #8000FF, #4D0099);
+      --yellow: #FFD700;
+      --black: #000;
+      --white: #fff;
+      --soft-bg: #f9f5ff;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--soft-bg);
+      color: var(--black);
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background: var(--primary-gradient);
+      color: var(--white);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pricing-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+
+    .pricing-card h2 {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #4D0099;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #8000FF;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .features {
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .btn-plan {
+      background: var(--primary-gradient);
+      color: var(--white);
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .btn-plan:hover {
+      background: #4D0099;
+    }
+
+    .recommended {
+      border: 3px solid var(--yellow);
+      transform: scale(1.05);
+    }
+
+    .badge-popular {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+      background: var(--yellow);
+      color: var(--black);
+      font-weight: bold;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .price {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Choose Your Plan</h1>
+    <p>Flexible pricing designed to protect and guide your family. Pick the plan that fits you best.</p>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="pricing-section">
+    <div class="row g-4">
+      
+      <!-- Free Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card text-center">
+          <h2>Free</h2>
+          <p class="price">$0 <span>/ month</span></p>
+          <ul class="features list-unstyled">
+            <li>✔ Ads appear while using app</li>
+            <li>✔ Limited access to family games</li>
+            <li>✔ Limited support data return to parent</li>
+            <li>✔ Educational program (basic)</li>
+          </ul>
+          <button class="btn-plan">Get Started</button>
+        </div>
+      </div>
+
+      <!-- Monthly Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card text-center">
+          <h2>Monthly</h2>
+          <p class="price">$4.99 <span>/ month</span></p>
+          <ul class="features list-unstyled">
+            <li>✔ No ads</li>
+            <li>✔ Powerful ad blocker</li>
+            <li>✔ Full access to family games</li>
+            <li>✔ Set limited time for apps (timer)</li>
+            <li>✔ Full support data return to parent</li>
+            <li>✔ Educational program (full)</li>
+            <li>✔ Children can join monthly challenge</li>
+          </ul>
+          <button class="btn-plan">Choose Monthly</button>
+        </div>
+      </div>
+
+      <!-- Yearly Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card text-center recommended">
+          <div class="badge-popular">Best Value</div>
+          <h2>Yearly</h2>
+          <p class="price">$3.99 <span>/ month (billed annually)</span></p>
+          <ul class="features list-unstyled">
+            <li>✔ Save 20% vs monthly</li>
+            <li>✔ No ads</li>
+            <li>✔ Powerful ad blocker</li>
+            <li>✔ Full access to family games</li>
+            <li>✔ Set limited time for apps (timer)</li>
+            <li>✔ Full support data return to parent</li>
+            <li>✔ Educational program (full)</li>
+            <li>✔ Children can join monthly challenge</li>
+          </ul>
+          <button class="btn-plan">Choose Yearly</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4" style="background: #000; color: #fff;">
+    <p>© 2025 FamiShield. All rights reserved.</p>
+  </footer>
+</body>
+</html>

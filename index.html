@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family & Kids App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(45deg, #8000FF, #4D0099);
+      --yellow: #FFD700;
+      --black: #000;
+      --white: #fff;
+      --soft-bg: #f9f5ff;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--soft-bg);
+      color: var(--black);
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background: var(--primary-gradient);
+      color: var(--white);
+      padding: 80px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .btn-yellow {
+      background-color: var(--yellow);
+      color: var(--black);
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-yellow:hover,
+    .btn-yellow:focus {
+      background-color: #ffe862;
+      transform: scale(1.05);
+      text-decoration: none;
+      color: var(--black);
+      outline: none;
+    }
+
+    .hero-side-image {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100%;
+      max-height: 300px;
+      user-select: none;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .left-image {
+      left: 0;
+    }
+    .right-image {
+      right: 0;
+    }
+
+    .top-nav-btn-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      position: relative;
+      top: -60px;
+      background: var(--primary-gradient);
+      border-radius: 40px;
+      padding: 5px 10px;
+      gap: 8px;
+    }
+    .top-nav-btn {
+      background: transparent;
+      color: var(--white);
+      font-weight: bold;
+      padding: 8px 20px;
+      border-radius: 0;
+      border: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      margin: 0;
+      cursor: pointer;
+    }
+    .top-nav-btn:first-child {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+    .top-nav-btn:last-child {
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .top-nav-btn:hover,
+    .top-nav-btn:focus {
+      background: transparent;
+      transform: scale(1.05);
+      color: var(--yellow);
+      outline: none;
+    }
+
+    .features {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .icon-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .icon-box:hover,
+    .icon-box:focus-within {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      outline: none;
+    }
+
+    .icon-box h4 {
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+    }
+
+    .icon-box p {
+      font-size: 1rem;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .btn-contact {
+      background: var(--primary-gradient);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .btn-contact:hover,
+    .btn-contact:focus {
+      background: linear-gradient(45deg, #4D0099, #8000FF);
+      outline: none;
+    }
+
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .hero-side-image {
+        max-height: 250px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero-side-image {
+        max-height: 180px;
+      }
+      .top-nav-btn-container {
+        top: -40px;
+        gap: 6px;
+        padding: 5px 5px;
+      }
+      .top-nav-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 60px 15px 40px;
+      }
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+      .hero-side-image {
+        display: none;
+      }
+      .top-nav-btn-container {
+        top: 0;
+        flex-wrap: wrap;
+        border-radius: 0;
+        padding: 10px 0;
+        margin-bottom: 20px;
+      }
+      .top-nav-btn {
+        flex: 1 1 45%;
+        margin: 5px 5px;
+        border-radius: 20px;
+        white-space: normal;
+      }
+      .features {
+        padding: 40px 15px;
+      }
+      .icon-box {
+        padding: 20px 15px;
+      }
+      .btn-contact {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="top-nav-btn-container" role="navigation" aria-label="Primary navigation">
+      <a href="index.html"><button type="button" class="top-nav-btn">Home</button></a>
+      <a href="guides.html"><button type="button" class="top-nav-btn">Guides</button></a>
+      <a href="pricing.html"><button type="button" class="top-nav-btn">Pricing</button></a>
+      <a href="vision.html"><button type="button" class="top-nav-btn">Vision</button></a>
+      <a href="mission.html"><button type="button" class="top-nav-btn">Mission</button></a>
+      <a href="terms.html"><button type="button" class="top-nav-btn">Term &amp; Condition</button></a>
+      <a href="privacy.html"><button type="button" class="top-nav-btn">Privacy Policy</button></a>
+    </div>
+    <img src="photos/l.PNG" alt="Left Image" class="hero-side-image left-image" aria-hidden="true" />
+    <img src="photos/r.PNG" alt="Right Image" class="hero-side-image right-image" aria-hidden="true" />
+    <h1>Welcome to FamiShield</h1>
+    <p>A fun, safe and joyful app experience for your kids and family.</p>
+    <a href="#features" class="btn-yellow">Learn More</a>
+  </section>
+
+  <!-- Features Section --> 
+  <section id="features" class="features container">
+    <h2>Why Choose Us?</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>👨‍👩‍👧‍👦 Family Friendly</h4>
+          <p>Designed for parents and kids of all ages with safety in mind.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>🎮 Fun Activities</h4>
+          <p>Interactive games, learning tools, and creative challenges.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>🔒 Safe & Secure</h4>
+          <p>Fully moderated content and strong privacy settings.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>💬 Your kids thought</h4>
+          <p>We help you understand better about your children's thoughts.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>👀 Monitoring Activities</h4>
+          <p>All your kids' activity will be analyzed and warn you about good and bad things.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>🛡️ Ad Blocker</h4>
+          <p>Best ad blocker for you and your family to stay away from boring and bad ads.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>🔞 Restrict Bad Contents</h4>
+          <p>We block all bad and dangerous websites and resources.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>🎁 Gifts & Rewards</h4>
+          <p>We offer special gifts and rewards to intelligent kids.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="icon-box" tabindex="0">
+          <h4>👩‍🏫 Educational Programs</h4>
+          <p>Healthy programs and courses for both kids and parents.</p>
+        </div>
+      </div>
+    </div>
+    <h4 class="mt-5 mb-4">This project will come in the near future,<br>Have questions or want to know more about this project?</h4>
+    <a href="mailto:xxztxx00@gmail.com"><button class="btn-contact" type="button">Contact Us</button></a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 FamiShield. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - FamiShield</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color-start: #8000FF;
+      --primary-color-end: #4D0099;
+      --primary-gradient: linear-gradient(45deg, var(--primary-color-start), var(--primary-color-end));
+      --yellow: #FFD700;
+      --black: #000;
+      --white: #fff;
+      --soft-bg: #f9f5ff;
+      --heading-color: var(--primary-color-end);
+      --link-color: var(--primary-color-start);
+      --link-hover-color: var(--primary-color-end);
+    }
+
+    /* Reset and base */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--soft-bg);
+      color: var(--black);
+      margin: 0;
+      padding: 0px;
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+
+    header.site-header .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    header.site-header a.home-link {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: opacity 0.3s ease;
+    }
+
+    header.site-header a.home-link:hover,
+    header.site-header a.home-link:focus {
+      opacity: 0.85;
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Container */
+    main.container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+      transition: box-shadow 0.3s ease;
+    }
+
+    main.container:hover {
+      box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+    }
+
+    /* Headings */
+    h1, h2 {
+      color: var(--heading-color);
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      border-bottom: 2px solid var(--primary-gradient);
+      padding-bottom: 0.3rem;
+    }
+
+    /* Text */
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 1.75rem;
+    }
+
+    /* Links */
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover, a:focus {
+      color: var(--link-hover-color);
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Section separator */
+    section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* Footer */
+    footer.footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 50px;
+      letter-spacing: 0.05em;
+    }
+
+    /* Responsive */
+    @media (max-width: 576px) {
+      body {
+        padding: 0px;
+      }
+      main.container {
+        padding: 25px 20px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      p, li {
+        font-size: 1rem;
+      }
+      header.site-header .container {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center; margin: 20px 0;">
+    <a href="index.html" class="home-link" aria-label="Go to homepage" style="font-size: 1.75rem; font-weight: 700; color: var(--primary-color-start); text-decoration: none; padding: 8px 16px; border: none; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: background-color 0.3s ease, color 0.3s ease;">
+      <img src="photos/fs.jpg" alt="FamiShield Logo" style="height: 80px; border-radius: 15px;">
+      FamiShield
+    </a>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="privacy-title">
+    <h1 id="privacy-title"><i class="bi bi-shield-lock-fill"></i> Privacy Policy</h1>
+    <p><strong>Last updated:</strong> July 31, 2025</p>
+
+    <p>Welcome to FamiShield. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our website.</p>
+
+    <section>
+      <h2><i class="bi bi-people-fill"></i> 1. Who We Are</h2>
+      <p>This website is the official landing page for FamiShield, a family and kids-focused application. We aim to create a safe, fun, and educational space for families.</p>
+    </section>
+
+    <section>
+      <h2><i class="bi bi-file-earmark-person-fill"></i> 2. Information We Collect</h2>
+      <p>We currently do not collect any personal information directly through this website. However, if you:</p>
+      <ul>
+        <li>Submit a contact form (coming soon),</li>
+        <li>Sign up for early access or a newsletter,</li>
+      </ul>
+      <p>we may collect:</p>
+      <ul>
+        <li>Your name</li>
+        <li>Your email address</li>
+      </ul>
+      <p>We do not collect information from children directly on this site.</p>
+    </section>
+
+    <section>
+      <h2><i class="bi bi-gear-fill"></i> 3. How We Use Your Information</h2>
+      <p>If you provide us with your email or name, we may use it to:</p>
+      <ul>
+        <li>Send you updates about the app</li>
+        <li>Respond to your messages or inquiries</li>
+        <li>Share important announcements like app launches</li>
+      </ul>
+      <p>We will never sell or share your information with third parties without your permission.</p>
+    </section>
+
+    <section>
+      <h2><i class="bi bi-cookie-fill"></i> 4. Cookies and Tracking</h2>
+      <p>We may use basic cookies to improve your browsing experience, such as:</p>
+      <ul>
+        <li>Remembering your visit preferences</li>
+        <li>Understanding general visitor traffic (via Google Analytics or similar)</li>
+      </ul>
+      <p>You can turn off cookies in your browser settings if you prefer.</p>
+    </section>
+
+    <section>
+      <h2><i class="bi bi-person-check-fill"></i> 5. Protecting Children’s Privacy</h2>
+      <p>We take children’s privacy seriously. This website is intended for parents and guardians. We do not knowingly collect any data from children under 13.</p>
+      <p>If we find that we have unknowingly collected personal data from a child, we will delete it as quickly as possible.</p>
+    </section>
+
+    <section>
+      <h2><i class="bi bi-shield-check"></i> 6. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access your data (if collected)</li>
+        <li>Ask us to delete or correct your data</li>
+        <li>Withdraw your consent at any time</li>
+      </ul>
+      <p>Just email us at <a href="mailto:xxztxx00@gmail.com">xxztxx00@gmail.com</a> if you'd like to make a request.</p>
+    </section>
+
+    <section>
+      <h2><i class="bi bi-pencil-square"></i> 7. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we’ll update the "Last updated" date at the top of this page.</p>
+    </section>
+
+    <section>
+      <h2><i class="bi bi-envelope-fill"></i> 8. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us at:</p>
+      <p>📧 <a href="mailto:xxztxx00@gmail.com">xxztxx00@gmail.com</a><br />
+      🌐 <a href="link e website" target="_blank" rel="noopener noreferrer">www.FamiShield.com</a></p>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>© 2025 FamiShield. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
